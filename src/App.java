@@ -1,5 +1,22 @@
 public class App {
     public static void main(String[] args) throws Exception {
-        System.out.println("Hello, World!");
+        String message = "This is my display!";
+        display(message);
+    }
+
+    public static void display (String message){
+        int length = message.length();
+
+        String border = "+";
+
+        for (int i = 0; i < length + 2; i++){
+            border += "-";
+        }
+
+        border += "+";
+
+        System.out.println(border);
+        System.out.println("| " + message + " |");
+        System.out.println(border);
     }
 }
